@@ -1,10 +1,21 @@
 @import url('https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,cyrillic')
 
+$min-width = 400px
+$max-width = 1000px
+$min-font = 14px
+$max-font = 20px
+
+html
+  // Borrowed from https://github.com/corysimmons/typographic/blob/master/stylus/typographic.styl
+  @media (min-width: $min-width)
+    font-size: s('calc( %s + (%s - %s) * ((100vw - %s) / (%s - %s)) )', $min-font, remove-unit($max-font), remove-unit($min-font), $min-width, remove-unit($max-width), remove-unit($min-width))
+  @media (min-width: $max-width)
+    font-size: $max-font
+
 body
   background-color: #fff
   color: #000
   font-family: Lora, serif
-  font-size: 12pt
   line-height: 150%
   max-width: 1000px
   margin: 0 auto
