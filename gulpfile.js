@@ -4,15 +4,22 @@ var stylus = require('gulp-stylus');
 var browserSync = require('browser-sync');
 var surge = require('gulp-surge');
 
+function onError (error) {
+  console.log(error);
+  this.emit('end');
+}
+
 gulp.task('html', function () {
   return gulp.src('index.jade')
     .pipe(jade())
+    .on('error', onError)
     .pipe(gulp.dest('./build'));
 });
 
 gulp.task('css', function () {
   return gulp.src('index.styl')
     .pipe(stylus())
+    .on('error', onError)
     .pipe(gulp.dest('./build'));
 });
 
