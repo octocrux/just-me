@@ -1,7 +1,69 @@
 doctype html
 html
   head
-    title Just Me
-    link(href='index.css', rel='stylesheet')
+    meta(charset='utf-8')
+    link(rel='stylesheet', href='index.css')
+
+    title CV
   body
-    h1 Hello
+    .section
+      .section__heading Обо мне
+      p
+        | Родилась и живу в Минске.
+        | Люблю путешествовать и общаться с новыми людьми.
+
+    .section
+      .section__heading Образование
+      ul
+        li БГУИР 2009&ndash;2014
+        li ФКСиС &#8222;Информатика&#8220;
+        li Дипломный проект: &#8222;Инструментарий для сервисно-ориентированной разработки&#8220;
+
+    .section
+      .section__heading Опыт работы
+      .companies
+        .companies__item
+          .companies__name GST Global Soft
+          ul
+            li Участвовала в разработке ERP-системы Matrix
+            li Разработала компоненты для оплаты услуг и страхования пациентов
+            li Координировала процесс разработки
+            li Внедрила GitHub Flow
+            li Администрировала вспомагательное ПО — Atlassian JIRA и Stash
+
+    .section
+      .section__heading Навыки
+      .skills
+        .skills__item
+          .skills__name JavaScript &mdash; новичок
+          p
+            | Разрабатываю при помощи Express и Angular, тестирую на Jasmine
+        .skills__item
+          .skills__name HTML &mdash; новичок
+          p
+            | Пользовалась WebRTC, Canvas и Drag & Drop API
+        .skills__item
+          .skills__name CSS &mdash; новичок
+          p
+            | Активно изучаю Flexbox, использую Stylus и пытаюсь практиковать БЭМ
+        .skills__item
+          .skills__name Docker &mdash; новичок
+          p
+            | Владею Docker и Docker Compose. Могу паковать разрабатываемые приложения
+            | в контейнеры. Могу не паковать. Могу показать другим, как паковать :)
+        .skills__item
+          .skills__name .NET &mdash; бывалый
+          p
+            | В течение двух лет разрабатывала настольные
+            | .NET приложения при помощи WinForms, C# и Entity Framework
+
+    .section
+      .section__heading Ожидания от ШРИ
+      ul
+        li Рассматриваю курсы как возможность попасть на работу в Яндекс
+        li Ожидаю расширить свой инженерный кругозор
+        li Хочу вникнуть в организацию процессов веб-разработки в крупной компании
+        li Надеюсь попробовать свои силы в новой для меня области
+
+    footer
+      | &mdash; Екатерина Петрусевич для ШРИ
