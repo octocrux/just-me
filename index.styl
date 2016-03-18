@@ -1,4 +1,5 @@
-@import url('https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic&subset=latin,cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Lora:400,700&subset=latin,cyrillic')
+@import url('https://fonts.googleapis.com/css?family=Open+Sans:400,700,600&subset=latin,cyrillic')
 
 $min-width = 140px
 $max-width = 1000px
@@ -13,12 +14,34 @@ html
     font-size: $max-font
 
 body
+  position: relative
   background-color: #fff
   color: #000
   font-family: Lora, serif
   line-height: 150%
   max-width: 1000px
   margin: 0 auto
+
+.content
+  padding: 4rem 0
+  margin: 0 2rem 0 16rem
+
+.sidenote
+  position: absolute
+  left: 2rem
+  width: 12rem
+  line-height: 140%
+  text-align: right
+  font-family: Open Sans, sans-serif
+  font-size: 0.85rem
+  color: #666
+
+.sidenote__name
+  font-weight: 600
+
+.sidenote__image
+  width: 10rem
+  padding-top: 0.5rem
 
 .ulist
   padding-left: 1.1rem
