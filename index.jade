@@ -9,20 +9,20 @@ html
     .content
       .section
         .section__heading Обо мне
-        p
+        .section__content
           | Родилась и живу в Минске.
           | Люблю путешествовать и общаться с новыми людьми.
 
       .section
         .section__heading Образование
-        .ulist
+        .section__content.ulist
           .ulist__item БГУИР 2009&ndash;2014
           .ulist__item ФКСиС &#8222;Информатика&#8220;
           .ulist__item Дипломный проект: &#8222;Инструментарий для сервисно-ориентированной разработки&#8220;
 
       .section
         .section__heading Опыт работы
-        .companies
+        .section__content.companies
           .companies__item
             .companies__name GST Global Soft
             .ulist
@@ -34,33 +34,33 @@ html
 
       .section
         .section__heading Навыки
-        .skills
+        .section__content.skills
           .skills__item
             .skills__name JavaScript &mdash; новичок
-            p
+            .skills__description
               | Разрабатываю при помощи Express и Angular, тестирую на Jasmine
           .skills__item
             .skills__name HTML &mdash; новичок
-            p
+            .skills__description
               | Пользовалась WebRTC, Canvas и Drag & Drop API
           .skills__item
             .skills__name CSS &mdash; новичок
-            p
+            .skills__description
               | Активно изучаю Flexbox, использую Stylus и пытаюсь практиковать БЭМ
           .skills__item
             .skills__name Docker &mdash; новичок
-            p
+            .skills__description
               | Владею Docker и Docker Compose. Могу паковать разрабатываемые приложения
               | в контейнеры. Могу не паковать. Могу показать другим, как паковать :)
           .skills__item
             .skills__name .NET &mdash; бывалый
-            p
+            .skills__description
               | В течение двух лет разрабатывала настольные
               | .NET приложения при помощи WinForms, C# и Entity Framework
 
       .section
         .section__heading Ожидания от ШРИ
-        .ulist
+        .section__content.ulist
           .ulist__item Рассматриваю курсы как возможность попасть на работу в Яндекс
           .ulist__item Ожидаю расширить свой инженерный кругозор
           .ulist__item Хочу вникнуть в организацию процессов веб-разработки в крупной компании
