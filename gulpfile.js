@@ -3,6 +3,7 @@ var jade = require('gulp-jade');
 var stylus = require('gulp-stylus');
 var browserSync = require('browser-sync');
 var surge = require('gulp-surge');
+var autoprefixer = require('gulp-autoprefixer');
 
 function onError (error) {
   console.log(error);
@@ -18,7 +19,8 @@ gulp.task('html', function () {
 
 gulp.task('css', function () {
   return gulp.src('index.styl')
-    .pipe(stylus())
+    .pipe(stylus({ compress: true }))
+    .pipe(autoprefixer())
     .on('error', onError)
     .pipe(gulp.dest('./build'));
 });
@@ -48,3 +50,5 @@ gulp.task('deploy', ['html', 'css', 'images'], function () {
     domain: 'just-me.surge.sh'
   });
 });
+
+gulp.task('default', ['browser-sync']);
