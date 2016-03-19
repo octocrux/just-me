@@ -23,7 +23,13 @@ gulp.task('css', function () {
     .pipe(gulp.dest('./build'));
 });
 
-gulp.task('browser-sync', function () {
+gulp.task('images', function () {
+  return gulp.src('images/*')
+    .on('error', onError)
+    .pipe(gulp.dest('./build'));
+});
+
+gulp.task('browser-sync', ['html', 'css', 'images'], function () {
   browserSync.init({
     server: {
       baseDir: './build'
@@ -32,10 +38,11 @@ gulp.task('browser-sync', function () {
 
   gulp.watch('index.jade', ['html']);
   gulp.watch('index.styl', ['css']);
+  gulp.watch('images/*', ['images']);
   gulp.watch('./build/*', browserSync.reload);
 });
 
-gulp.task('deploy', ['html', 'css'], function () {
+gulp.task('deploy', ['html', 'css', 'images'], function () {
   return surge({
     project: './build',
     domain: 'just-me.surge.sh'
