@@ -56,7 +56,7 @@ body
   border-top: 2px solid #000
   font-size: 1.2rem
   font-weight: 600
-  padding: 8px 0
+  padding: 0.5rem 0
 
 .companies__name
   font-weight: 600
@@ -71,11 +71,11 @@ body
 
 .skills__name
   font-weight: 600
-  padding: 4px 0
+  padding-bottom: 0.25rem
 
 .skills__description
   padding-right: 1.5rem
-  margin-bottom: 8px
+  margin-bottom: 0.5rem
 
 .signature
   display: flex
@@ -90,15 +90,30 @@ body
     padding: 0
 
   .sidenote
+    display: flex
+    flex-direction: column
+
     position: inherit
     visibility: inherit
-    text-align: right
+    text-align: left
     width: 100%
-    padding-bottom: 0.5rem
+    margin-bottom: 1.5rem
 
+    font-family: Lora, serif
     font-size: 1rem
     line-height: 1.6rem
     color: #000
+
+  .sidenote__image
+    order: 1
+
+  .sidenote__name
+    order: 2
+    font-size: 1.2rem
+    padding: 0.5rem 0
+
+  .sidenote__content
+    order: 3
 
   .skills__item
     flex-basis: 100%
