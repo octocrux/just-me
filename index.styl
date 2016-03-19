@@ -3,7 +3,7 @@
 
 $min-width = 140px
 $max-width = 1000px
-$min-font = 12px
+$min-font = 16px
 $max-font = 20px
 
 html
@@ -81,7 +81,29 @@ body
   display: flex
   justify-content: flex-end
 
-@media (max-width: 700px)
+@media screen and (max-width: 680px)
+  body
+    margin: 0
+
+  .content
+    margin: 2rem
+    padding: 0
+
+  .sidenote
+    position: inherit
+    visibility: inherit
+    text-align: right
+    width: 100%
+    padding-bottom: 0.5rem
+
+    font-size: 1rem
+    line-height: 1.6rem
+    color: #000
+
+  .skills__item
+    flex-basis: 100%
+
+@media screen and (max-width: 800px)
   .skills__item
     flex-basis: 100%
 
